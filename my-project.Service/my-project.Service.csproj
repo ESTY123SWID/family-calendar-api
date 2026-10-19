@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>my_project.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 14.0.0 is the last MIT-licensed version (15+ requires a license key).
+         Known issue: CVE-2026-32933 / GHSA-rvv3-g6hj-g44x (uncontrolled recursion on deeply nested
+         object graphs, patched only in 15.1.1 / 16.1.1). Accepted risk: this project maps only flat
+         entity → DTO data loaded from the database, and request DTOs are never mapped by AutoMapper.
+         The NU1903 build warning is intentionally left visible. -->
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="MailKit" Version="4.18.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.31" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.21.0" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\my-project.Core\my-project.Core.csproj" />
+  </ItemGroup>
+
+</Project>

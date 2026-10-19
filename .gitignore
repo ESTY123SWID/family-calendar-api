@@ -1,0 +1,35 @@
+# Log files written by NLog (my-project.API/nlog.config)
+my-project.API/logs/
+
+# Build output
+bin/
+obj/
+
+# Visual Studio local settings and cache
+.vs/
+
+# Files uploaded to events (LocalFileStorage)
+my-project.API/uploads/
+
+# The React client is a separate repository (family-client has its own .gitignore)
+family-client/
+
+# Local tool settings and per-user IDE files
+.claude/
+*.user
+*.suo
+
+# Test results
+TestResults/
+
+# Planning drafts and the internal requirements document – kept on the computer, not part of the submission
+server-plan.md
+entities-plan.md
+family-calendar-v3.html
+*.docx
+~$*
+
+# Never commit secrets (they live in User Secrets / environment variables)
+secrets.json
+.env
+*.pfx

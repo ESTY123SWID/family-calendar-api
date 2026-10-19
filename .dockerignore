@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/logs/
+**/uploads/
+.vs/
+.git/
+family-client/
+my-project.Tests/
+**/secrets.json
+**/*.user
